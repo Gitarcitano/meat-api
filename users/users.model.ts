@@ -43,7 +43,7 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-const hashPassword = (obj, next){
+const hashPassword = (obj, next)=>{//remove arrowF
     bcrypt.hash(obj.password, environment.security.saltRounds)
     .then(hash=>{
         obj.password = hash
