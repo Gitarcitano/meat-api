@@ -13,6 +13,13 @@ class ReviewsRouter extends ModelRouter<Review> {
                     .populate('restaurant', 'name')
     }
 
+    envelope(document){
+      let resource = super.envelope(document)
+      const restId = document.restaurant._id ? document.restaurant._id : document.restaurant
+      resource._links.restaurant = `/restaurants/${restId}`
+      return resource
+    }
+
     /*findByID =  (req, res, next)=>{
         this.model.findById(req.params.id)
             .populate('user', 'name')
