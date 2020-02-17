@@ -10,14 +10,16 @@
   "author": "",
   "license": "ISC",
   "jest": {
-    "globals":{
+    "globals": {
       "address": "http://localhost:3001"
     },
     "testEnvironment": "node",
     "preset": "ts-jest/presets/js-with-ts"
   },
   "dependencies": {
+    "@types/jsonwebtoken": "^8.3.7",
     "bcrypt": "^3.0.8",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "5.9.0",
     "restify": "^8.5.1",
     "restify-errors": "8.0.2"
