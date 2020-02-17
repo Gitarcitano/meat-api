@@ -4,11 +4,11 @@
   "description": "API restaurantes",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles"
+    "test": "ts-node jest.startup.ts"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",  
+  "license": "ISC",
   "jest": {
     "testEnvironment": "node",
     "preset": "ts-jest/presets/js-with-ts"
@@ -26,8 +26,10 @@
     "@types/restify": "^8.4.2",
     "@types/supertest": "^2.0.8",
     "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
     "supertest": "^4.0.2",
     "ts-jest": "^25.2.0",
+    "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
   }
 }
