@@ -3,5 +3,8 @@
         "outDir": "dist",
         "target": "ES6",
         "module": "CommonJS"
-    }
+    },
+    "exclude": [
+      "**/*.test.ts"
+    ]
 }
