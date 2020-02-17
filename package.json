@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "jest": {
+    "globals":{
+      "address": "http://localhost:3001"
+    },
     "testEnvironment": "node",
     "preset": "ts-jest/presets/js-with-ts"
   },

@@ -2,7 +2,6 @@ import * as mongoose from 'mongoose'
 import { validateCPF } from '../common/validador'
 import * as bcrypt from 'bcrypt'
 import { environment } from '../common/environment'
-import { usersRouter } from './users.router'
 
 export interface User extends mongoose.Document {
     name: string,
@@ -40,7 +39,7 @@ const userSchema = new mongoose.Schema({
     cpf: {
         type: String,
         required: false,
-        validade: {
+        validate: {
             validator: validateCPF,
             message: '{PATH}: Invalid CPF ({VALUE})'
         }

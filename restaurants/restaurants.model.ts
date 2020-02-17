@@ -13,7 +13,7 @@ export interface Restaurant extends mongoose.Document {
 const menuSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: TextTrackCue,
+        required: true,
     },
     price: {
         type: Number,

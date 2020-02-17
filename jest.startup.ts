@@ -7,6 +7,7 @@ import { usersRouter } from './users/users.router'
 import { reviewsRouter } from './reviews/reviews.router'
 import { User } from './users/users.model'
 import { Review } from './reviews/reviews.model'
+import { restaurantsRouter } from './restaurants/restaurants.router'
 
 
 let server: Server
@@ -16,7 +17,8 @@ const beforeAllTests = ()=>{
   server = new Server()
   return server.bootstrap([
     usersRouter,
-    reviewsRouter
+    reviewsRouter,
+    restaurantsRouter
   ])
   .then(()=>User.deleteMany({}).exec())
   .then(()=>Review.deleteMany({}).exec())
